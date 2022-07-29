@@ -49,4 +49,8 @@ public class Gato extends Animal {
         System.out.println("Miiiiii  miiiiii.");
     }
 
+    @Override
+    public String toString() {
+        return "Gato{" + "nombre=" + nombre + ", raza=" + raza + ", dueno=" + dueno + '}';
+    }
 }
