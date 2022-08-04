@@ -21,7 +21,7 @@ public class Main {
 
         Scanner lector = new Scanner(System.in);
 
-        Agenda agenda = new Agenda(new HashMap<>());
+        Agenda agenda = new Agenda(new HashMap<>( /*    CONTENIDO   */     ));
         System.out.println(agenda);
         
         String operacion = lector.nextLine().toUpperCase();
@@ -29,7 +29,7 @@ public class Main {
 
         if ("AGREGAR".equals(operacion)) {
             boolean resultado = agenda.agregar(Integer.parseInt(informacion[ID]), informacion[NOMBRE], informacion[DIRECCION], informacion[TELEFONO]);
-            System.out.println(resultado ? agenda.generarInforme() : "ERROR");
+            System.out.println(resultado ? String.format("%.1f", agenda.generarInforme()) : "ERROR");
 
         } else if ("ACTUALIZAR".equals(operacion)) {
             boolean resultado = agenda.actualizar(Integer.parseInt(informacion[ID]), informacion[DIRECCION], informacion[TELEFONO]);

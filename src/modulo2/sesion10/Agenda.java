@@ -86,7 +86,7 @@ public class Agenda {
         return false;
     }
 
-    public int generarInforme() {
+    public double generarInforme() {
         return listaPersona.size();
     }
 }
